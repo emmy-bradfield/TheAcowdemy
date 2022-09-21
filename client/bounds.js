@@ -13,7 +13,7 @@ collisionsArray.forEach((row, i) => {
                     x: (j * Bound.width) + offset.x,
                     y: (i * Bound.height) + offset.y
                 },
-                colour: 'red'
+                colour: 'rgba(255, 0, 0, 0)'
             }));
         };
     });
