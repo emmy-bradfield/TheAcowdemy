@@ -48,13 +48,12 @@ class Sprite {
         }
     }
 };
-
 class Bound {
     static width = 80;
     static height = 80;
     constructor(
         {
-            position, 
+            position,
             colour
         }
     )
