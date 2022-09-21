@@ -24,5 +24,3 @@ const FOREGROUND = new Sprite({
     },
     image: Images.foreground
 });
-
-const MOVABLES = [ MAP, FOREGROUND ];

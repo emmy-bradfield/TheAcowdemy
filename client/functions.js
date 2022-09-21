@@ -1,3 +1,5 @@
+const MOVABLES = [ MAP, FOREGROUND, ...COLLISIONS ];
+
 const moveUp = () => {
     playerImg.src = up;
     PLAYER.moving = true;
