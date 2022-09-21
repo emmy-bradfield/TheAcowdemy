@@ -35,7 +35,7 @@ zonesArray.forEach((row, i) => {
                     x: (j * Bound.width) + offset.x,
                     y: (i * Bound.height) + offset.y
                 },
-                colour: 'purple'
+                colour: 'rgba(255, 0, 0, 0)'
             }))
         }
     })

@@ -9,8 +9,26 @@ const hitBox = ({player, bound}) => {
         );
 };
 
+const collect = () => {
+    for (i = 0; i< COLLECTABLES.length; i++) {
+        const BOX = COLLECTABLES[i];
+    if (hitBox(
+        {
+            player: PLAYER, 
+            bound: {
+                ...BOX,
+                position: {
+                    x: BOX.position.x,
+                    y: BOX.position.y
+                }
+            }
+        })) {
+            if (Math.random() >= 0.990) console.log("Collectables zone entered")
+            };
+    }
+}
+
 const boundAlert = () => {
-    console.log("You hit a boundary!");
     moving = false;
 };
 
