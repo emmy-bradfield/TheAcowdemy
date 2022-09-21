@@ -1,28 +1,114 @@
 const MOVABLES = [ MAP, FOREGROUND, ...COLLISIONS ];
 
+const hitBox = ({player, bound}) => {
+    return(
+        player.position.x + player.width >= bound.position.x 
+        && player.position.x <= bound.position.x + bound.width
+        && player.position.y + player.height >= bound.position.y
+        && player.position.y <= bound.position.y + bound.height
+        );
+};
+
+const boundAlert = () => {
+    console.log("You hit a boundary!");
+    moving = false;
+};
+
 const moveUp = () => {
     playerImg.src = up;
     PLAYER.moving = true;
+    for (let i = 0; i < COLLISIONS.length; i++) {
+        const BOX = COLLISIONS[i];
+        if (hitBox(
+            {
+                player: PLAYER,
+                bound: {
+                    ...BOX,
+                    position: {
+                        x: BOX.position.x,
+                        y: BOX.position.y + velocity
+                    }
+                }
+            }
+        )) {
+            boundAlert();
+            break;
+        }
+    }
     if (moving) MOVABLES.forEach(movable => movable.position.y += velocity);
 };
 
 const moveLeft = () => {
     playerImg.src = left;
     PLAYER.moving = true;
+    for (let i = 0; i < COLLISIONS.length; i++) {
+        const BOX = COLLISIONS[i];
+        if (hitBox(
+            {
+                player: PLAYER,
+                bound: {
+                    ...BOX,
+                    position: {
+                        x: BOX.position.x + velocity,
+                        y: BOX.position.y
+                    }
+                }
+            }
+        )) {
+            boundAlert();
+            break;
+        }
+    }
     if (moving) MOVABLES.forEach(movable => movable.position.x += velocity);
 };
 
 const moveDown = () => {
     playerImg.src = down;
     PLAYER.moving = true;
+    for (let i = 0; i < COLLISIONS.length; i++) {
+        const BOX = COLLISIONS[i];
+        if (hitBox(
+            {
+                player: PLAYER,
+                bound: {
+                    ...BOX,
+                    position: {
+                        x: BOX.position.x,
+                        y: BOX.position.y - velocity
+                    }
+                }
+            }
+        )) {
+            boundAlert();
+            break;
+        }
+    }
     if (moving) MOVABLES.forEach(movable => movable.position.y -= velocity);
 };
 
 const moveRight = () => {
     playerImg.src = right;
     PLAYER.moving = true;
+    for (let i = 0; i < COLLISIONS.length; i++) {
+        const BOX = COLLISIONS[i];
+        if (hitBox(
+            {
+                player: PLAYER,
+                bound: {
+                    ...BOX,
+                    position: {
+                        x: BOX.position.x - velocity,
+                        y: BOX.position.y
+                    }
+                }
+            }
+        )) {
+            boundAlert();
+            break;
+        }
+    }
     if (moving) MOVABLES.forEach(movable => movable.position.x -= velocity);
-}
+};
 
 const keyDownEvent = (e) => {
     switch(e.key) {
