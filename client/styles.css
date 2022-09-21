@@ -1,0 +1,33 @@
+body{
+    margin:0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas{
+    width: 1024;
+    height: 576;
+    border-radius: 10px;
+    margin: 0;
+}
+
+#parent{
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;;
+}
+
+#child{
+    width: 1024;
+    height: 576;
+    background-color: black;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    opacity: 0;
+}
