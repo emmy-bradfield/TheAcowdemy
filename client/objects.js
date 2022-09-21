@@ -22,10 +22,18 @@ playerImg.src = down;
 const foregroundImg = new Image();
 foregroundImg.src = './assets/foreground.png';
 
+const homeGate = new Image();
+homeGate.src = './assets/gate1/shut.png';
+
+const awayGate = new Image();
+awayGate.src = './assets/gate2/shut.png';
+
  const Images = {
     map: mapImg,
     player: playerImg,
-    foreground: foregroundImg
+    foreground: foregroundImg,
+    fence: homeGate,
+    wall: awayGate
 };
 
 const offset = {

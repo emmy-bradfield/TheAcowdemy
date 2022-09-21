@@ -25,4 +25,18 @@ const FOREGROUND = new Sprite({
     image: Images.foreground
 });
 
-const MOVABLES = [ MAP, FOREGROUND ];
+const FENCE_GATE = new Sprite({
+    position: {
+        x: -8,
+        y: 930
+    },
+    image: Images.fence
+});
+
+const WALL_GATE = new Sprite({
+    position: {
+        x: 3995,
+        y: 930
+    },
+    image: Images.wall
+});
