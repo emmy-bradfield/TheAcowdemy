@@ -1,24 +1,24 @@
 const moveUp = () => {
     playerImg.src = up;
-    moving = true;
+    PLAYER.moving = true;
     if (moving) MOVABLES.forEach(movable => movable.position.y += velocity);
 };
 
 const moveLeft = () => {
     playerImg.src = left;
-    moving = true;
+    PLAYER.moving = true;
     if (moving) MOVABLES.forEach(movable => movable.position.x += velocity);
 };
 
 const moveDown = () => {
     playerImg.src = down;
-    moving = true;
+    PLAYER.moving = true;
     if (moving) MOVABLES.forEach(movable => movable.position.y -= velocity);
 };
 
 const moveRight = () => {
     playerImg.src = right;
-    moving = true;
+    PLAYER.moving = true;
     if (moving) MOVABLES.forEach(movable => movable.position.x -= velocity);
 }
 

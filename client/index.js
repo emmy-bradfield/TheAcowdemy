@@ -5,6 +5,9 @@ function animate() {
     PLAYER.draw();
     FOREGROUND.draw();
 
+    moving = true;
+    PLAYER.moving = false;
+
     window.addEventListener('keydown', keyDownEvent);
     window.addEventListener('keyup', keyUpEvent);
 

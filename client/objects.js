@@ -29,7 +29,7 @@ foregroundImg.src = './assets/foreground.png';
 };
 
 const offset = {
-    x: -1575,
+    x: -1605,
     y: -750
 };
 
