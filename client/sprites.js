@@ -27,16 +27,16 @@ const FOREGROUND = new Sprite({
 
 const FENCE_GATE = new Sprite({
     position: {
-        x: offset.x,
-        y: offset.y
+        x: -8,
+        y: 930
     },
     image: Images.fence
 });
 
 const WALL_GATE = new Sprite({
     position: {
-        x: offset.x,
-        y: offset.y
+        x: 3995,
+        y: 930
     },
     image: Images.wall
 });

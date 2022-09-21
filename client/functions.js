@@ -1,4 +1,4 @@
-const MOVABLES = [ MAP, FOREGROUND, ...COLLISIONS, ...HOME, ...BARN, ...LEAVE, ...RETURN, ...HUT, ...COLLECTABLES, ...ANIMATE ];
+const MOVABLES = [ MAP, FOREGROUND, ...COLLISIONS, ...HOME, ...BARN, ...LEAVE, ...RETURN, ...HUT, ...COLLECTABLES, ...ANIMATE, FENCE_GATE, WALL_GATE ];
 
 const hitBox = ({player, bound}) => {
     return(
@@ -20,6 +20,17 @@ const enteredZone = ({player, bound}) => {
         bound.position.y + bound.height)
         - Math.max(player.position.y, bound.position.y));
         return (overlap > (player.width * player.height) / 1.5)
+}
+
+const gateAnimations = () => {
+    for (i = 0; i < ANIMATE.length; i ++) {
+        const BOX = ANIMATE[i];
+        if (hitBox({player: PLAYER, bound: BOX})) homeGate.src='./assets/gate1/open.png';
+    }
+    for (i = 0; i < ANIMATE.length; i ++) {
+        const BOX = ANIMATE[i];
+        if (hitBox({player: PLAYER, bound: BOX})) awayGate.src='./assets/gate2/open.png';
+    }
 }
 
 const goHome = () => {

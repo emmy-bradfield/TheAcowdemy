@@ -22,15 +22,17 @@ function animate() {
     window.addEventListener('keyup', keyUpEvent);
 
     if (keys.w.pressed || keys.a.pressed || keys.s.pressed || keys.d.pressed) {
+        homeGate.src='./assets/gate1/shut.png';
+        awayGate.src='./assets/gate2/shut.png';
         goHome();
         goBarn();
         leave();
         sailHome();
         goHut();
         collect();
-        openFenceGate();
-        openWallGate();
+        gateAnimations();
     }
+    
 
     if (keys.w.pressed && lastKey === 'w') moveUp();
     else if (keys.a.pressed && lastKey === 'a') moveLeft();
