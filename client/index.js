@@ -4,6 +4,7 @@ function animate() {
     MAP.draw();
     PLAYER.draw();
     COLLISIONS.forEach(bound => bound.draw());
+    COLLECTABLES.forEach(bound => bound.draw());
     FOREGROUND.draw();
 
     moving = true;

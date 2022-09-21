@@ -1,4 +1,4 @@
-const MOVABLES = [ MAP, FOREGROUND, ...COLLISIONS ];
+const MOVABLES = [ MAP, FOREGROUND, ...COLLISIONS, ...COLLECTABLES ];
 
 const hitBox = ({player, bound}) => {
     return(
