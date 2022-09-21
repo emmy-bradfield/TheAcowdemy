@@ -24,3 +24,19 @@ const FOREGROUND = new Sprite({
     },
     image: Images.foreground
 });
+
+const FENCE_GATE = new Sprite({
+    position: {
+        x: offset.x,
+        y: offset.y
+    },
+    image: Images.fence
+});
+
+const WALL_GATE = new Sprite({
+    position: {
+        x: offset.x,
+        y: offset.y
+    },
+    image: Images.wall
+});
