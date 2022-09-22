@@ -2,8 +2,8 @@ const goHome = () => {
     for (i = 0; i< HOME.length; i++) {
         const BOX = HOME[i];
         if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})){
-            console.log("Entering home...");
             HOME_DOOR.active = true;
+            setInterval(window.location.replace('./home'), 5000);
         } 
     }
 }
@@ -12,8 +12,8 @@ const goBarn = () => {
     for (i = 0; i< BARN.length; i++) {
         const BOX = BARN[i];
         if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})) {
-            console.log("Entering barn...");
             BARN_DOOR.active = true;
+            setInterval(window.location.replace('./barn'), 5000);
         }
     }
 }
@@ -47,8 +47,8 @@ const goHut = () => {
     for (i = 0; i< HUT.length; i++) {
         const BOX = HUT[i];
         if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})) {
-            console.log("Entering hut...");
             HUT_DOOR.active = true;
+            setInterval(window.location.replace('./hut'), 5000);
         }
     }
 }
