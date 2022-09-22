@@ -1,0 +1,24 @@
+{
+  "name": "acowdemy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client/index.html",
+  "scripts": {
+    "start": "nodemon --inspect server/index.js",
+    "test": "cd server && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmy-bradfield/TheAcowdemy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emmy-bradfield/TheAcowdemy/issues"
+  },
+  "homepage": "https://github.com/emmy-bradfield/TheAcowdemy#readme",
+  "dependencies": {
+    "dotenv": "^16.0.2"
+  }
+}
