@@ -6,6 +6,7 @@ function animate() {
     PLAYER.draw();
     BOUNDS.forEach(bound => bound.draw());
     FOREGROUND.draw();
+    UI.draw();
     
     moving = true;
     PLAYER.moving = false;
