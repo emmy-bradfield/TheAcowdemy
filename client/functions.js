@@ -1,4 +1,7 @@
-const MOVABLES = [ MAP, FOREGROUND, ...COLLISIONS, ...HOME, ...BARN, ...LEAVE, ...RETURN, ...HUT, ...COLLECTABLES, ...ANIMATE, FENCE_GATE, WALL_GATE ];
+const INTERACTIVE_OBJECTS = [CHEST, HOME_DOOR, BARN_DOOR, HUT_DOOR, FENCE_GATE, WALL_GATE];
+const BOUNDS = [...COLLISIONS, ...HOME, ...BARN, ...LEAVE, ...RETURN, ...HUT, ...COLLECTABLES, ...ANIMATE];
+const MAPS = [MAP, FOREGROUND];
+const MOVABLES = [ ...MAPS, ...BOUNDS, ...INTERACTIVE_OBJECTS];
 
 const hitBox = ({player, bound}) => {
     return(
@@ -22,49 +25,53 @@ const enteredZone = ({player, bound}) => {
         return (overlap > (player.width * player.height) / 1.5)
 }
 
-const gateAnimations = () => {
-    for (i = 0; i < ANIMATE.length; i ++) {
-        const BOX = ANIMATE[i];
-        if (hitBox({player: PLAYER, bound: BOX})) homeGate.src='./assets/gate1/open.png';
-    }
-    for (i = 0; i < ANIMATE.length; i ++) {
-        const BOX = ANIMATE[i];
-        if (hitBox({player: PLAYER, bound: BOX})) awayGate.src='./assets/gate2/open.png';
-    }
-}
-
 const goHome = () => {
     for (i = 0; i< HOME.length; i++) {
         const BOX = HOME[i];
-        if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})) console.log("Entering home...")
+        if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})){
+            console.log("Entering home...");
+            zone = 'home';
+        } 
     }
 }
 
 const goBarn = () => {
     for (i = 0; i< BARN.length; i++) {
         const BOX = BARN[i];
-        if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})) console.log("Entering barn...")
+        if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})) {
+            console.log("Entering barn...");
+            zone = 'barn';
+        }
     }
 }
 
 const leave = () => {
     for (i = 0; i< LEAVE.length; i++) {
         const BOX = LEAVE[i];
-        if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})) console.log("Sailing away...")
+        if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})) {
+            console.log("Sailing away...");
+            zone = 'away';
+        }   
     }
 }
 
 const sailHome = () => {
     for (i = 0; i< RETURN.length; i++) {
         const BOX = RETURN[i];
-        if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})) console.log("Sailing back home...")
+        if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})) {
+            console.log("Sailing back home...");
+            zone = 'main';
+        }
     }
 }
 
 const goHut = () => {
     for (i = 0; i< HUT.length; i++) {
         const BOX = HUT[i];
-        if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})) console.log("Entering hut...")
+        if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})) {
+            console.log("Entering hut...");
+            zone = 'hut';
+        }
     }
 }
 
