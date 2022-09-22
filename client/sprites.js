@@ -27,7 +27,7 @@ const FOREGROUND = new Sprite({
 
 const FENCE_GATE = new Sprite({
     position: {
-        x: -8,
+        x: -6,
         y: 930
     },
     image: Images.fence
