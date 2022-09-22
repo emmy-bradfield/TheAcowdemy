@@ -9,7 +9,7 @@ const MAP = new Sprite({
 const PLAYER = new Sprite({
     position:{
         x: (canvas.width/2)-(Images.player.width/18),
-        y: (canvas.height/2)-(Images.player.height/2)
+        y: (canvas.height/2)-(Images.player.height)
     },
     image: Images.player,
     frames: {
@@ -25,3 +25,11 @@ const FOREGROUND = new Sprite({
     },
     image: Images.foreground
 });
+
+const UI = new Sprite({
+    position: {
+        x: (canvas.width/2)-(Images.overlay.width/2),
+        y: (canvas.height/2)-(Images.overlay.height/2)
+    },
+    image: Images.overlay
+})

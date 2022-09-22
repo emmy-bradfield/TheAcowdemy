@@ -6,30 +6,32 @@ canvas.height = 576;
 const ctx = canvas.getContext('2d');
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-// SPRITE IMAGES
+// IMAGES
+// --static
 const mapImg = new Image();
-mapImg.src = './assets/map.png';
-
-const up = './assets/spritesheets/playerUp.png';
-
-const left = './assets/spritesheets/playerLeft.png';
-
-const down = './assets/spritesheets/playerDown.png';
-
-const right = './assets/spritesheets/playerRight.png';
-
-const playerImg = new Image();
-playerImg.src = down;
+mapImg.src = './assets/img/map.png';
 
 const foregroundImg = new Image();
-foregroundImg.src = './assets/foreground.png';
+foregroundImg.src = './assets/img/foreground.png';
 
-const homeGate = new Image();
-homeGate.src = './assets/gate1/shut.png';
+// --sprite
+const playerImg = new Image();
 
-const awayGate = new Image();
-awayGate.src = './assets/gate2/shut.png';
+const up = './assets/spritesheets/playerUp.png';
+const left = './assets/spritesheets/playerLeft.png';
+const down = './assets/spritesheets/playerDown.png';
+const right = './assets/spritesheets/playerRight.png';
 
+playerImg.src = down;
+
+const overlayImg = new Image();
+
+const max = './assets/img/overlay.png';
+const min = './assets/img/overlayDown.png';
+
+overlayImg.src = max;
+
+// --object
 const homeImg = new Image();
 homeImg.src = './assets/spritesheets/homeDoor.png';
 
@@ -39,19 +41,27 @@ barnImg.src = './assets/spritesheets/barnDoor.png';
 const hutImg = new Image();
 hutImg.src = './assets/spritesheets/hutDoor.png';
 
+const mainGate = new Image();
+mainGate.src = './assets/spritesheets/mainGate.png';
+
+const secondGate = new Image();
+secondGate.src = './assets/spritesheets/secondGate.png';
+
 const chestImg = new Image();
 chestImg.src = './assets/spritesheets/chest.png';
 
+// --array
 const Images = {
     map: mapImg,
-    player: playerImg,
     foreground: foregroundImg,
-    fence: homeGate,
-    wall: awayGate,
+    player: playerImg,
+    overlay: overlayImg,
     home: homeImg,
     barn: barnImg,
     hut: hutImg,
-    chest: chestImg
+    chest: chestImg,
+    gateOne: mainGate,
+    gateTwo: secondGate
 };
 
 // MOVEMENT
@@ -72,11 +82,26 @@ const keys = {
 
 let lastKey = '';
 
-const velocity = 3;
+const velocity = 5;
 
 let moving = false;
 
 const offset = {
     x: -1605,
-    y: -750
+    y: -800
+};
+
+// IN-GAME ITEMS
+const INVENTORY = {
+    plants: 0,
+    coins: 0,
+    bugs: 0
+};
+
+const COWS = [];
+
+const Daisy = {
+    name: 'Daisy',
+    age: 2,
+    rarity: 1
 };
