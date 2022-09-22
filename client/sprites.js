@@ -13,7 +13,8 @@ const PLAYER = new Sprite({
     },
     image: Images.player,
     frames: {
-        max: 9
+        max: 9,
+        rate: 5
     }
 });
 
@@ -23,20 +24,4 @@ const FOREGROUND = new Sprite({
         y: offset.y
     },
     image: Images.foreground
-});
-
-const FENCE_GATE = new Sprite({
-    position: {
-        x: -8,
-        y: 930
-    },
-    image: Images.fence
-});
-
-const WALL_GATE = new Sprite({
-    position: {
-        x: 3995,
-        y: 930
-    },
-    image: Images.wall
 });

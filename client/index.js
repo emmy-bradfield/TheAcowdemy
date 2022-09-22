@@ -2,38 +2,35 @@ function animate() {
     window.requestAnimationFrame(animate);
 
     MAP.draw();
-    FENCE_GATE.draw();
-    WALL_GATE.draw();
+    INTERACTIVE_OBJECTS.forEach(object => object.draw());
     PLAYER.draw();
-    COLLISIONS.forEach(bound => bound.draw());
-    HOME.forEach(bound => bound.draw());
-    BARN.forEach(bound => bound.draw());
-    LEAVE.forEach(bound => bound.draw());
-    RETURN.forEach(bound => bound.draw());
-    HUT.forEach(bound => bound.draw());
-    COLLECTABLES.forEach(bound => bound.draw());
-    ANIMATE.forEach(bound => bound.draw());
+    BOUNDS.forEach(bound => bound.draw());
     FOREGROUND.draw();
     
     moving = true;
     PLAYER.moving = false;
+    HOME_DOOR.active = false;
+    BARN_DOOR.active = false;
+    HUT_DOOR.active = false;
+    CHEST.active = false;
+    homeGate.src='./assets/gate1/shut.png';
+    awayGate.src='./assets/gate2/shut.png';
 
+    goHome();
+    goBarn();
+    leave();
+    sailHome();
+    goHut();
+    openChest();
+    
     window.addEventListener('keydown', keyDownEvent);
     window.addEventListener('keyup', keyUpEvent);
 
     if (keys.w.pressed || keys.a.pressed || keys.s.pressed || keys.d.pressed) {
-        homeGate.src='./assets/gate1/shut.png';
-        awayGate.src='./assets/gate2/shut.png';
-        goHome();
-        goBarn();
-        leave();
-        sailHome();
-        goHut();
         collect();
         gateAnimations();
     }
     
-
     if (keys.w.pressed && lastKey === 'w') moveUp();
     else if (keys.a.pressed && lastKey === 'a') moveLeft();
     else if (keys.s.pressed && lastKey === 's') moveDown();
