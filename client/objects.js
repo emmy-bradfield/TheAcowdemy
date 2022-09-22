@@ -18,14 +18,18 @@ foregroundImg.src = './assets/img/foreground.png';
 const playerImg = new Image();
 
 const up = './assets/spritesheets/playerUp.png';
-
 const left = './assets/spritesheets/playerLeft.png';
-
 const down = './assets/spritesheets/playerDown.png';
-
 const right = './assets/spritesheets/playerRight.png';
 
 playerImg.src = down;
+
+const overlayImg = new Image();
+
+const max = './assets/img/overlay.png';
+const min = './assets/img/overlayDown.png';
+
+overlayImg.src = max;
 
 // --object
 const homeImg = new Image();

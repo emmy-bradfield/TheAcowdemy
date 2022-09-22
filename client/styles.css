@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'acowdemy';
+    src: url('./assets/misc/acowdemy.ttf');
+}
+
 body{
     margin:0;
     display: inline-flex;
@@ -32,4 +37,66 @@ canvas{
     right: 0;
     pointer-events: none;
     opacity: 0;
+}
+
+#display{
+    width: 1024;
+    height: 576;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 6.5em;
+    padding-left: 6.5em;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: -0.2em;
+}
+
+#items-text{
+    pointer-events: none;
+    color: rgb(0, 0, 0);
+    font-family: 'acowdemy';
+    width: 24%;
+    height: fit-content;
+    margin-top: auto;
+    margin-left: auto;
+    line-height: 1em;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#users-text {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 500px;
+    margin-left: -2.5em;
+    margin-bottom: 3em;
+    margin-top: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 100px;
+}
+
+#user{
+    font-family: 'acowdemy';
+    margin-top: 0;
+    margin-bottom: 0.5;
+    font-size: small;
+}
+
+#level{
+    font-family: 'acowdemy';
+    margin-top: 0;
+    margin-bottom: 0.4em;
+    font-size: medium;
 }
