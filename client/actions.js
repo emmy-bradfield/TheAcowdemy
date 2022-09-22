@@ -56,7 +56,8 @@ const goHut = () => {
 const collect = () => {
     for (i = 0; i< COLLECTABLES.length; i++) {
         const BOX = COLLECTABLES[i];
-        if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX}) && Math.random() < 0.01) {
+        if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX}) && Math.random() < 0.1) {
+            console.log("Item found!")
             if (Math.random() > 0.5) INVENTORY.bugs +=1;
             else if (Math.random() > 0.15) INVENTORY.plants +=1;
             else INVENTORY.coins +=1;

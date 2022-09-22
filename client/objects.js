@@ -88,7 +88,7 @@ let moving = false;
 
 const offset = {
     x: -1605,
-    y: -775
+    y: -800
 };
 
 // IN-GAME ITEMS

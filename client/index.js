@@ -21,6 +21,7 @@ function animate() {
     goBarn();
     goHut();
     openChest();
+    updateItems();
     
     window.addEventListener('keydown', keyDownEvent);
     window.addEventListener('keyup', keyUpEvent);
