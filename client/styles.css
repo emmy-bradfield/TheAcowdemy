@@ -3,11 +3,11 @@
     src: url('./assets/misc/acowdemy.ttf');
 }
 
-body{
-    margin:0;
+body {
+    margin: 0;
     display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 100%;
     min-height: 100vh;
     background-color: rgb(224, 169, 151);
@@ -16,7 +16,54 @@ body{
 canvas{
     border-radius: 10px;
     margin: 0;
+    margin-top: 1.5em;
     border: 3px dotted black;
+}
+
+#sidebar {
+    display: inline-flex;
+    width: 15vw;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+    margin-top: 2em;
+    margin-bottom: 0;
+}
+
+ul{
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+li{
+    list-style: none;
+}
+
+.navBtn{
+    background-color: transparent;
+    border: none;
+    font-family: 'acowdemy';
+    width: fit-content;
+    height: fit-content;
+    font-size: larger;
+    color: black;
+    font-weight: bold;
+    pointer-events: all;
+}
+
+.navBtn:hover{
+    background-color: transparent;
+    border: none;
+    font-family: 'acowdemy';
+    width: fit-content;
+    height: fit-content;
+    font-size: large;
+    color: black;
+    font-size: x-large;
+    font-weight: bolder;
+    cursor:pointer;
 }
 
 #parent{

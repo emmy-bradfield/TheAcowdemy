@@ -11,6 +11,11 @@ ROUTER.route('/signup').post((req, res) => {
         name: req.body.name,
         age: req.body.age,
         level: 1,
+        items: [{
+            veg: 0,
+            bug: 0,
+            gem: 0
+        }],
         cows: []
     };
     const NEWUSER = new User(userObj);
