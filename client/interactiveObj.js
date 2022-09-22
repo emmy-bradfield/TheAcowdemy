@@ -1,7 +1,7 @@
 const HOME_DOOR = new Object({
     position: {
         x: 480,
-        y: 180
+        y: 130
     },
     image: Images.home,
     frames: {
@@ -12,7 +12,7 @@ const HOME_DOOR = new Object({
 const BARN_DOOR = new Object({
     position: {
         x: -375,
-        y: 1075
+        y: 1025
     },
     image: Images.barn,
     frames: {
@@ -23,7 +23,7 @@ const BARN_DOOR = new Object({
 const HUT_DOOR = new Object({
     position: {
         x: 4100,
-        y: 730
+        y: 680
     },
     image: Images.hut,
     frames: {
@@ -34,7 +34,7 @@ const HUT_DOOR = new Object({
 const CHEST = new Object({
     position: {
         x: 750,
-        y: 150
+        y: 100
     },
     image: Images.chest,
     frames: {
@@ -45,7 +45,7 @@ const CHEST = new Object({
 const MAIN_GATE = new Object({
     position: {
         x: 73,
-        y: 930
+        y: 880
     },
     image: Images.gateOne,
     frames: {
@@ -56,7 +56,7 @@ const MAIN_GATE = new Object({
 const SECOND_GATE = new Object({
     position: {
         x: 3993,
-        y: 930
+        y: 880
     },
     image: Images.gateTwo,
     frames: {

@@ -53,14 +53,15 @@ chestImg.src = './assets/spritesheets/chest.png';
 // --array
 const Images = {
     map: mapImg,
-    player: playerImg,
     foreground: foregroundImg,
-    gateOne: mainGate,
-    gateTwo: secondGate,
+    player: playerImg,
+    overlay: overlayImg,
     home: homeImg,
     barn: barnImg,
     hut: hutImg,
-    chest: chestImg
+    chest: chestImg,
+    gateOne: mainGate,
+    gateTwo: secondGate
 };
 
 // MOVEMENT
@@ -87,5 +88,20 @@ let moving = false;
 
 const offset = {
     x: -1605,
-    y: -750
+    y: -800
+};
+
+// IN-GAME ITEMS
+const INVENTORY = {
+    plants: 0,
+    coins: 0,
+    bugs: 0
+};
+
+const COWS = [];
+
+const Daisy = {
+    name: 'Daisy',
+    age: 2,
+    rarity: 1
 };

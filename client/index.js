@@ -6,6 +6,7 @@ function animate() {
     PLAYER.draw();
     BOUNDS.forEach(bound => bound.draw());
     FOREGROUND.draw();
+    UI.draw();
     
     moving = true;
     PLAYER.moving = false;
@@ -20,6 +21,7 @@ function animate() {
     goBarn();
     goHut();
     openChest();
+    updateItems();
     
     window.addEventListener('keydown', keyDownEvent);
     window.addEventListener('keyup', keyUpEvent);
