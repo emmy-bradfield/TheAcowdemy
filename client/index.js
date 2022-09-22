@@ -13,13 +13,11 @@ function animate() {
     BARN_DOOR.active = false;
     HUT_DOOR.active = false;
     CHEST.active = false;
-    homeGate.src='./assets/gate1/shut.png';
-    awayGate.src='./assets/gate2/shut.png';
+    MAIN_GATE.active = false;
+    SECOND_GATE.active = false;
 
     goHome();
     goBarn();
-    leave();
-    sailHome();
     goHut();
     openChest();
     
@@ -27,6 +25,8 @@ function animate() {
     window.addEventListener('keyup', keyUpEvent);
 
     if (keys.w.pressed || keys.a.pressed || keys.s.pressed || keys.d.pressed) {
+        leave();
+        sailHome();
         collect();
         gateAnimations();
     }

@@ -6,9 +6,16 @@ canvas.height = 576;
 const ctx = canvas.getContext('2d');
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-// SPRITE IMAGES
+// IMAGES
+// --static
 const mapImg = new Image();
-mapImg.src = './assets/map.png';
+mapImg.src = './assets/img/map.png';
+
+const foregroundImg = new Image();
+foregroundImg.src = './assets/img/foreground.png';
+
+// --sprite
+const playerImg = new Image();
 
 const up = './assets/spritesheets/playerUp.png';
 
@@ -18,18 +25,9 @@ const down = './assets/spritesheets/playerDown.png';
 
 const right = './assets/spritesheets/playerRight.png';
 
-const playerImg = new Image();
 playerImg.src = down;
 
-const foregroundImg = new Image();
-foregroundImg.src = './assets/foreground.png';
-
-const homeGate = new Image();
-homeGate.src = './assets/gate1/shut.png';
-
-const awayGate = new Image();
-awayGate.src = './assets/gate2/shut.png';
-
+// --object
 const homeImg = new Image();
 homeImg.src = './assets/spritesheets/homeDoor.png';
 
@@ -39,15 +37,22 @@ barnImg.src = './assets/spritesheets/barnDoor.png';
 const hutImg = new Image();
 hutImg.src = './assets/spritesheets/hutDoor.png';
 
+const mainGate = new Image();
+mainGate.src = './assets/spritesheets/mainGate.png';
+
+const secondGate = new Image();
+secondGate.src = './assets/spritesheets/secondGate.png';
+
 const chestImg = new Image();
 chestImg.src = './assets/spritesheets/chest.png';
 
+// --array
 const Images = {
     map: mapImg,
     player: playerImg,
     foreground: foregroundImg,
-    fence: homeGate,
-    wall: awayGate,
+    gateOne: mainGate,
+    gateTwo: secondGate,
     home: homeImg,
     barn: barnImg,
     hut: hutImg,
@@ -72,7 +77,7 @@ const keys = {
 
 let lastKey = '';
 
-const velocity = 3;
+const velocity = 5;
 
 let moving = false;
 

@@ -1,30 +1,3 @@
-const FENCE_GATE = new Object({
-    position: {
-        x: -6,
-        y: 930
-    },
-    image: Images.fence
-});
-
-const WALL_GATE = new Object({
-    position: {
-        x: 3995,
-        y: 930
-    },
-    image: Images.wall
-});
-
-const CHEST = new Object({
-    position: {
-        x: 750,
-        y: 150
-    },
-    image: Images.chest,
-    frames: {
-        max: 2
-    }
-});
-
 const HOME_DOOR = new Object({
     position: {
         x: 480,
@@ -53,6 +26,39 @@ const HUT_DOOR = new Object({
         y: 730
     },
     image: Images.hut,
+    frames: {
+        max: 2
+    }
+});
+
+const CHEST = new Object({
+    position: {
+        x: 750,
+        y: 150
+    },
+    image: Images.chest,
+    frames: {
+        max: 2
+    }
+});
+
+const MAIN_GATE = new Object({
+    position: {
+        x: 73,
+        y: 930
+    },
+    image: Images.gateOne,
+    frames: {
+        max: 2
+    }
+});
+
+const SECOND_GATE = new Object({
+    position: {
+        x: 3993,
+        y: 930
+    },
+    image: Images.gateTwo,
     frames: {
         max: 2
     }
