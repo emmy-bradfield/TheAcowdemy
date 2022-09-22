@@ -22,7 +22,7 @@ const enteredZone = ({player, bound}) => {
     (Math.min(player.position.y + player.height, 
         bound.position.y + bound.height)
         - Math.max(player.position.y, bound.position.y));
-        return (overlap > (player.width * player.height) / 1.5)
+        return (overlap > (player.width * player.height) / 2)
 }
 
 const goHome = () => {
@@ -30,7 +30,7 @@ const goHome = () => {
         const BOX = HOME[i];
         if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})){
             console.log("Entering home...");
-            zone = 'home';
+            HOME_DOOR.active = true;
         } 
     }
 }
@@ -40,7 +40,7 @@ const goBarn = () => {
         const BOX = BARN[i];
         if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})) {
             console.log("Entering barn...");
-            zone = 'barn';
+            BARN_DOOR.active = true;
         }
     }
 }
@@ -50,7 +50,6 @@ const leave = () => {
         const BOX = LEAVE[i];
         if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})) {
             console.log("Sailing away...");
-            zone = 'away';
         }   
     }
 }
@@ -60,7 +59,6 @@ const sailHome = () => {
         const BOX = RETURN[i];
         if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})) {
             console.log("Sailing back home...");
-            zone = 'main';
         }
     }
 }
@@ -70,7 +68,7 @@ const goHut = () => {
         const BOX = HUT[i];
         if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})) {
             console.log("Entering hut...");
-            zone = 'hut';
+            HUT_DOOR.active = true;
         }
     }
 }
@@ -78,7 +76,16 @@ const goHut = () => {
 const collect = () => {
     for (i = 0; i< COLLECTABLES.length; i++) {
         const BOX = COLLECTABLES[i];
-        if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX}) && Math.random() < 0.01) console.log("Collectable found!")
+        if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX}) && Math.random() < 0.01) {
+            console.log("Collectable found!");
+        }
+    }
+}
+
+const openChest = () => {
+    for (i = 0; i < COLLECTABLES.length; i++) {
+        const BOX = COLLECTABLES[i];
+        if (hitBox({player: PLAYER, bound: BOX})) CHEST.active = true;
     }
 }
 
@@ -206,4 +213,14 @@ const keyUpEvent = (e) => {
         case 'd' : keys.d.pressed = false; break;
         case 'ArrowRight' : keys.d.pressed = false; break;
     };
+};
+
+const gateAnimations = () => {
+    for (i = 0; i < ANIMATE.length; i ++) {
+        const BOX = ANIMATE[i];
+        if (hitBox({player: PLAYER, bound: BOX})) {
+            homeGate.src='./assets/gate1/open.png';
+            awayGate.src='./assets/gate2/open.png';
+        }
+    }
 };

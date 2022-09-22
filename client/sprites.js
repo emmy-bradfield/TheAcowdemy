@@ -13,7 +13,8 @@ const PLAYER = new Sprite({
     },
     image: Images.player,
     frames: {
-        max: 9
+        max: 9,
+        rate: 5
     }
 });
 

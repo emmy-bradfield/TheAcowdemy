@@ -1,4 +1,4 @@
-const FENCE_GATE = new Sprite({
+const FENCE_GATE = new Object({
     position: {
         x: -6,
         y: 930
@@ -6,7 +6,7 @@ const FENCE_GATE = new Sprite({
     image: Images.fence
 });
 
-const WALL_GATE = new Sprite({
+const WALL_GATE = new Object({
     position: {
         x: 3995,
         y: 930
@@ -14,7 +14,7 @@ const WALL_GATE = new Sprite({
     image: Images.wall
 });
 
-const CHEST = new Sprite({
+const CHEST = new Object({
     position: {
         x: 750,
         y: 150
@@ -25,7 +25,7 @@ const CHEST = new Sprite({
     }
 });
 
-const HOME_DOOR = new Sprite({
+const HOME_DOOR = new Object({
     position: {
         x: 480,
         y: 180
@@ -36,10 +36,10 @@ const HOME_DOOR = new Sprite({
     }
 });
 
-const BARN_DOOR = new Sprite({
+const BARN_DOOR = new Object({
     position: {
-        x: 450,
-        y: 900
+        x: -375,
+        y: 1075
     },
     image: Images.barn,
     frames: {
@@ -47,12 +47,12 @@ const BARN_DOOR = new Sprite({
     }
 });
 
-const HUT_DOOR = new Sprite({
+const HUT_DOOR = new Object({
     position: {
-        x: 3990,
-        y: 950
+        x: 4100,
+        y: 730
     },
-    image: Images.barn,
+    image: Images.hut,
     frames: {
         max: 2
     }

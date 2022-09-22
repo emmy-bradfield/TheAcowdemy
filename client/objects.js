@@ -76,10 +76,6 @@ const velocity = 3;
 
 let moving = false;
 
-
-// POSITIONING
-let zone = '';
-
 const offset = {
     x: -1605,
     y: -750
