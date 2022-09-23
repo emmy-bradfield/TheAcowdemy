@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../styles.css" rel="stylesheet">
+    <link href="../assets/img/favicon.ico" rel="icon"/>
     <title>Acowdemy | Login or Signup</title>
 </head>
 <body>
@@ -16,20 +17,20 @@
 
     <div class="row">
         <div class="column">
-            <form class="login">
+            <form id="loginForm" class="login">
                 <h1>Log in</h1>
                 <hr/>
                 <label>Username</label>
-                <input id="username" type="text" class="input-field" />
+                <input id="username" type="text" class="input-field" autocomplete="username" />
                 <label>Password</label>
-                <input id="password" type="password" class="input-field" />
+                <input id="password" type="password" class="input-field" autocomplete="current-password" />
                 <a class="classic-link" href="#" ><em>Forgotten username or password</em></a>
-                <button type="submit" class="submitBtn">Login</button>
+                <button id="loginBtn" type="submit" class="submitBtn">Login</button>
             </form>
         </div>
 
         <div class="column">
-            <form class="login">
+            <form id="signupForm" class="login">
                 <h1>Sign up</h1>
                 <hr/>
                 <div class="input-row">
@@ -37,31 +38,44 @@
                     <label>Username</label>
                 </div>
                 <div class="input-row">
-                    <input id="newUsername" type="text" class="input-field" />
-                    <input id="name" type="text" class="input-field" />
+                    <input id="name" type="text" class="input-field" autocomplete="name" />
+                    <input id="newUsername" type="text" class="input-field" autocomplete="username" />
                 </div>
                 <div class="input-row">
                     <label class="l">Email Address</label>
                     <label class="xs">Age</label>
                 </div>
                 <div class="input-row">
-                    <input id="email" type="text" class="input-field xl" />
-                    <input id="age" type="number" class="input-field xs" />
+                    <input id="email" type="text" class="input-field xl" autocomplete="email" />
+                    <input id="age" type="number" class="input-field xs" autocomplete="off"/>
                 </div>
                 <div class="input-row">
                     <label>Password</label>
                     <label>Confirm Password</label>
                 </div>
                 <div class="input-row">
-                    <input id="newPassword" type="password" class="input-field" />
-                    <input id="confirmPassword" type="password" class="input-field" />
+                    <input id="newPassword" type="password" class="input-field" autocomplete="new-password" />
+                    <input id="confirmPassword" type="password" class="input-field" autocomplete="off" />
                 </div>
-                <button type="submit" class="submitBtn">Sign up</button>
+                <button id="signupBtn" type="submit" class="submitBtn">Sign up</button>
             </form>
         </div>
     </div>
-    
-    <script src="./dom.js"></script>
+
+
+    <!--axios-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--gsap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"
+        integrity="sha512-Mf/xUqfWvDIr+1B6zfnIDIiG7XHzyP/guXUWgV6PgaQoIFeXkJQR5XWh9fqAiCiRCpemabt3naV4jhDWVnuYDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="./objects.js"></script>
+    <script src="./routes.js"></script>
+    <script src="./functions.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>

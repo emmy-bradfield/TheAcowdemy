@@ -1,9 +1,9 @@
 const checkLogin = () => {
     console.log("checkLogin() started")
-    const isLogged = localStorage.getItem("log")
-    if (isLogged === 'true') {
+    const isLoggedIn = localStorage.getItem("accountStored")
+    if (isLoggedIn === 'yes') {
         console.log("logged in: true")
-        axios.get(`/users/get/${localStorage.getItem("user")}`).then(res => {
+        axios.get(`/users/get/${localStorage.getItem("username")}`).then(res => {
             const readItems = JSON.stringify(res.data.items);
             const readCows = JSON.stringify(res.data.cows);
             const USER = {
