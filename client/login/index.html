@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles.css" rel="stylesheet">
+    <title>Acowdemy | Login or Signup</title>
+</head>
+<body>
+
+    <header>
+        <img class="logo-l" src="../assets/img/logo250x195.png" />
+        <h1 class="title"> The Acowdemy </h1>
+    </header>
+
+    <div class="row">
+        <div class="column">
+            <form class="login">
+                <h1>Log in</h1>
+                <hr/>
+                <label>Username</label>
+                <input id="username" type="text" class="input-field" />
+                <label>Password</label>
+                <input id="password" type="password" class="input-field" />
+                <a class="classic-link" href="#" ><em>Forgotten username or password</em></a>
+                <button type="submit" class="submitBtn">Login</button>
+            </form>
+        </div>
+
+        <div class="column">
+            <form class="login">
+                <h1>Sign up</h1>
+                <hr/>
+                <div class="input-row">
+                    <label>First Name</label>
+                    <label>Username</label>
+                </div>
+                <div class="input-row">
+                    <input id="newUsername" type="text" class="input-field" />
+                    <input id="name" type="text" class="input-field" />
+                </div>
+                <div class="input-row">
+                    <label class="l">Email Address</label>
+                    <label class="xs">Age</label>
+                </div>
+                <div class="input-row">
+                    <input id="email" type="text" class="input-field xl" />
+                    <input id="age" type="number" class="input-field xs" />
+                </div>
+                <div class="input-row">
+                    <label>Password</label>
+                    <label>Confirm Password</label>
+                </div>
+                <div class="input-row">
+                    <input id="newPassword" type="password" class="input-field" />
+                    <input id="confirmPassword" type="password" class="input-field" />
+                </div>
+                <button type="submit" class="submitBtn">Sign up</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="./dom.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

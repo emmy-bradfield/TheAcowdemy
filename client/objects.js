@@ -9,46 +9,46 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 // IMAGES
 // --static
 const mapImg = new Image();
-mapImg.src = '../assets/img/map.png';
+mapImg.src = './assets/img/map.png';
 
 const foregroundImg = new Image();
-foregroundImg.src = '../assets/img/foreground.png';
+foregroundImg.src = './assets/img/foreground.png';
 
 // --sprite
 const playerImg = new Image();
 
-const up = '../assets/spritesheets/playerUp.png';
-const left = '../assets/spritesheets/playerLeft.png';
-const down = '../assets/spritesheets/playerDown.png';
-const right = '../assets/spritesheets/playerRight.png';
+const up = './assets/spritesheets/playerUp.png';
+const left = './assets/spritesheets/playerLeft.png';
+const down = './assets/spritesheets/playerDown.png';
+const right = './assets/spritesheets/playerRight.png';
 
 playerImg.src = down;
 
 const overlayImg = new Image();
 
-const max = '../assets/img/overlay.png';
-const min = '../assets/img/overlayDown.png';
+const max = './assets/img/overlay.png';
+const min = './assets/img/overlayDown.png';
 
 overlayImg.src = max;
 
 // --object
 const homeImg = new Image();
-homeImg.src = '../assets/spritesheets/homeDoor.png';
+homeImg.src = './assets/spritesheets/homeDoor.png';
 
 const barnImg = new Image();
-barnImg.src = '../assets/spritesheets/barnDoor.png';
+barnImg.src = './assets/spritesheets/barnDoor.png';
 
 const hutImg = new Image();
-hutImg.src = '../assets/spritesheets/hutDoor.png';
+hutImg.src = './assets/spritesheets/hutDoor.png';
 
 const mainGate = new Image();
-mainGate.src = '../assets/spritesheets/mainGate.png';
+mainGate.src = './assets/spritesheets/mainGate.png';
 
 const secondGate = new Image();
-secondGate.src = '../assets/spritesheets/secondGate.png';
+secondGate.src = './assets/spritesheets/secondGate.png';
 
 const chestImg = new Image();
-chestImg.src = '../assets/spritesheets/chest.png';
+chestImg.src = './assets/spritesheets/chest.png';
 
 // --array
 const Images = {
