@@ -11,14 +11,15 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 const display = new Image();
 display.src = '../assets/img/home.png';
 
-// IN-GAME ITEMS
-const INVENTORY = {
-    plants: 0,
-    coins: 0,
-    bugs: 0
-};
+// DOM
+const buildCow = document.querySelector('#cowBtn');
 
-const COWS = [];
+// IN-GAME ITEMS
+let ACCOUNT;
+
+let INVENTORY;
+
+let COWS = [];
 
 const Daisy = {
     name: 'Daisy',

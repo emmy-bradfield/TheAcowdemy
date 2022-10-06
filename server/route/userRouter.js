@@ -54,7 +54,7 @@ ROUTER.route("/add-cow/:_id").post((req, res) => {
         "_id": req.params._id
     }, {
         $push: {
-            "cows": req.body.cow
+            "cows": req.body
         }
     }).then(() => res.json(true)).catch((err) => res.json(`Error: ${err}`));
 })

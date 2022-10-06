@@ -341,6 +341,10 @@ li{
     margin-top: auto;
     width: 3.5em;
     height: 2.5em;
+    background-color: transparent;
+    border: 0;
+    pointer-events: all;
+    cursor: pointer;
 }
 
 /*BARN*/
