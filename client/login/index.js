@@ -28,5 +28,17 @@ const signup = (e) => {
     }
 }
 
+const logout = async() => {
+    if (localStorage.getItem("logout") === "yes"){
+        let ACCOUNT = JSON.parse(localStorage.getItem("user"));
+        let id = ACCOUNT._id;
+        console.log(ACCOUNT);
+        console.log(id)
+        await axios.post(`http://localhost:4000/users/save/${id}`, ACCOUNT);
+        localStorage.clear();
+        // window.location.reload();
+    }
+}
+
 loginBtn.addEventListener('click', login);
 signupBtn.addEventListener('click', signup);
