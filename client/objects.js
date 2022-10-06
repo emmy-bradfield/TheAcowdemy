@@ -92,6 +92,8 @@ const offset = {
 };
 
 // IN-GAME ITEMS
+let ACCOUNT;
+
 const INVENTORY = {
     plants: 0,
     coins: 0,

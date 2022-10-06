@@ -1,5 +1,3 @@
-let ACCOUNT;
-
 const checkLogin = () => {
     console.log("checkLogin() started")
     const isLoggedIn = localStorage.getItem("accountStored")
