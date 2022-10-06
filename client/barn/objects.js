@@ -9,7 +9,7 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 // IMAGES
 // --static
 const display = new Image();
-display.src = '../assets/img/home.png';
+display.src = '../assets/img/blank_template.png';
 
 // IN-GAME ITEMS
 const INVENTORY = {

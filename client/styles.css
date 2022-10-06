@@ -229,6 +229,14 @@ li{
     border-radius: 10px;;
 }
 
+#parent2{
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+    margin-left: 170px;
+    width: 100%;
+}
+
 #child{
     width: 1024;
     height: 576;
@@ -333,4 +341,14 @@ li{
     margin-top: auto;
     width: 3.5em;
     height: 2.5em;
+    background-color: transparent;
+    border: 0;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+/*BARN*/
+.cowImg{
+    width: 100px;
+    margin-right: 50px;
 }
