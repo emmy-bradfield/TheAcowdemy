@@ -13,7 +13,7 @@ const goBarn = () => {
         const BOX = BARN[i];
         if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})) {
             BARN_DOOR.active = true;
-            setInterval(window.location.replace('../barn'), 5000);
+            setInterval(window.location.replace('./barn'), 5000);
         }
     }
 }
