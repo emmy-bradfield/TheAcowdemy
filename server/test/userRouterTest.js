@@ -6,13 +6,6 @@ const {User} = require('../model/userModel');
 CHAI.use(CHAIHTTP);
 
 describe("Test the User Routes", function () { 
-    // SETUP
-    // before((done) => {
-    //     User.deleteMany({}, (err, res) => {
-    //         done();
-    //     })
-    // });
-
     // TEST DATA
     const TESTCOW = {
         _id: 'Betty',
@@ -37,6 +30,13 @@ describe("Test the User Routes", function () {
         name: "Test User",
         age: 20,
         level: 1,
+        items: [{
+            _id: 0,
+            bug: 0,
+            veg: 0,
+            gem: 0,
+            CP: 0
+        }],
         cows: [TESTCOW],
         __v: 0
     }
@@ -48,6 +48,13 @@ describe("Test the User Routes", function () {
         name: "Test User",
         age: 20,
         level: 2,
+        items: [{
+            _id: 0,
+            bug: 0,
+            veg: 0,
+            gem: 0,
+            CP: 0
+        }],
         cows: [TESTCOW],
         __v: 0
     }
@@ -59,6 +66,31 @@ describe("Test the User Routes", function () {
         name: "Test User",
         age: 20,
         level: 2,
+        items: [{
+            _id: 0,
+            bug: 0,
+            veg: 0,
+            gem: 0,
+            CP: 0
+        }],
+        cows: [TESTCOW, NEWCOW],
+        __v: 0
+    }
+
+    const SAVED_USER = {
+        _id: "test-user-1",
+        password: "root",
+        email: "test-user@gmail.com",
+        name: "Test User",
+        age: 20,
+        level: 2,
+        items: [{
+            _id: 0,
+            bug: 10,
+            veg: 6,
+            gem: 2,
+            CP: 38
+        }],
         cows: [TESTCOW, NEWCOW],
         __v: 0
     }
@@ -89,11 +121,11 @@ describe("Test the User Routes", function () {
             expect(res).to.have.status(200);
             expect(res).to.not.be.null;
             User.find().then((users) => {
-                expect(users).to.have.lengthOf(0);
+                expect(users).to.have.lengthOf(2);
                 expect(users).to.include(NEWUSER);
             });
-            done();
         });
+        done();
     });
 
     it("Should return a specific user given the ID", (done) => {
@@ -107,8 +139,8 @@ describe("Test the User Routes", function () {
             User.findById("test-user-1").then((user) => {
                 expect(user).to.equal(NEWUSER);
             });
-            done();
         })
+        done();
     });
 
     it("Should return a specific user given the email", (done) => {
@@ -122,8 +154,8 @@ describe("Test the User Routes", function () {
             User.findOne({"email": "test-user@gmail.com"}).then((user) => {
                 expect(user).to.equal(NEWUSER);
             });
-            done();
         })
+        done();
     });
 
     it("Should return a specific user's cows given the ID", (done) => {
@@ -138,8 +170,8 @@ describe("Test the User Routes", function () {
                 expect(cows).to.include(TESTCOW);
                 expect(cows).to.have.lengthOf(1);
             });
-            done();
         })
+        done();
     });
 
     // UPDATE
@@ -154,8 +186,8 @@ describe("Test the User Routes", function () {
             User.findById("test-user-1").then((user) => {
                 expect(user).to.equal(LEVELEDUSER);
             });
-            done();
         });
+        done();
     });
 
     it("Should add a new cow to the account of a specific user", (done) => {
@@ -169,8 +201,23 @@ describe("Test the User Routes", function () {
             User.findById("test-user-1").then((user) => {
                 expect(user).to.equal(USER_COW);
             });
-            done();
         })
+        done();
+    })
+
+    it("Should save the user with the updated items", (done) => {
+        CHAI.request(APP).post("/users/save/test-user-1").query("test-user-1").send(SAVED_USER).end((err, res) => {
+            if(err){
+                console.log(err);
+                done(err);
+            }
+            expect(res).to.have.status(200);
+            expect(res).to.not.be.null;
+            User.findById("test-user-1").then((user) => {
+                expect(user).to.equal(SAVED_USER);
+            })
+        })
+        done();
     })
 
 
@@ -186,7 +233,8 @@ describe("Test the User Routes", function () {
             User.findById("test-user-1").then((user) => {
                 expect(user).to.be.null;
             });
-            done();
         })
+        done();
     })
+
 })
