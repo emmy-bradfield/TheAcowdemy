@@ -5,12 +5,17 @@ const { User } = require("../model/userModel");
 // CREATE
 ROUTER.route('/signup').post((req, res) => {
     let userObj = {
-        _id: req.body._id,
+        _id: req.body.username,
         password: req.body.password,
         email: req.body.email,
         name: req.body.name,
         age: req.body.age,
         level: 1,
+        items: [{
+            veg: 0,
+            bug: 0,
+            gem: 0
+        }],
         cows: []
     };
     const NEWUSER = new User(userObj);
