@@ -1,3 +1,19 @@
+const checkLogin = () => {
+    console.log("checkLogin() started")
+    const isLoggedIn = localStorage.getItem("accountStored")
+    if (isLoggedIn !== 'yes') window.location.replace('./login')
+    else {
+        let USER = JSON.parse(localStorage.getItem("user"));
+        console.log(USER)
+    }
+}
+
+const setup = () => {
+    
+}
+
+window.addEventListener('load', checkLogin);
+
 function animate() {
     window.requestAnimationFrame(animate);
 

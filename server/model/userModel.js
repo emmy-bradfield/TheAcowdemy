@@ -16,6 +16,11 @@ const userSchema = new Schema({
     email: String,
     age: Number,
     level: Number,
+    items: [{
+        veg: Number,
+        bug: Number,
+        gem: Number
+    }],
     cows: [cowSchema]
 });
 
