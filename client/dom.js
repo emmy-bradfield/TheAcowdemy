@@ -13,11 +13,12 @@ const updateItems = () => {
     veg.textContent = `${String(INVENTORY.plants).padStart(3, 0)}`;
     bug.textContent = `${String(INVENTORY.bugs).padStart(3, 0)}`;
     gem.textContent = `${String(INVENTORY.coins).padStart(3, 0)}`;
-}
+};
 
 const logout = () => {
-    localStorage.clear();
-    window.location.replace('./index.html');
-}
+    console.log("logout attempted");
+    localStorage.setItem("logout", "yes");
+    window.location.replace('./login');
+};
 
 logoutBtn.addEventListener('click', logout);

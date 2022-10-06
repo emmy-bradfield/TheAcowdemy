@@ -6,9 +6,6 @@ canvas.height = 576;
 const ctx = canvas.getContext('2d');
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-// DOM OBJECTS
-
-
 // IMAGES
 // --static
 const mapImg = new Image();
@@ -95,10 +92,13 @@ const offset = {
 };
 
 // IN-GAME ITEMS
+let ACCOUNT;
+
 const INVENTORY = {
     plants: 0,
     coins: 0,
-    bugs: 0
+    bugs: 0,
+    coins: 0
 };
 
 const COWS = [];

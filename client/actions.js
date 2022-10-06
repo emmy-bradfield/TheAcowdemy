@@ -58,9 +58,18 @@ const collect = () => {
         const BOX = COLLECTABLES[i];
         if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX}) && Math.random() < 0.1) {
             console.log("Item found!")
-            if (Math.random() > 0.5) INVENTORY.bugs +=1;
-            else if (Math.random() > 0.15) INVENTORY.plants +=1;
-            else INVENTORY.coins +=1;
+            if (Math.random() > 0.5) {
+                INVENTORY.bugs +=1;
+                ACCOUNT.items[0].bug = INVENTORY.bugs
+            } else if (Math.random() > 0.15) {
+                INVENTORY.plants +=1;
+                ACCOUNT.items[0].veg = INVENTORY.plants
+            } else {
+                INVENTORY.coins +=1;
+                ACCOUNT.items[0].gem = INVENTORY.coins
+            }
+            ACCOUNT.items[0].CP = (ACCOUNT.items[0].bug) + (ACCOUNT.items[0].veg * 3) + (ACCOUNT.items[0].gem * 5);
+            localStorage.setItem("user", JSON.stringify(ACCOUNT));
         }
     }
 }
