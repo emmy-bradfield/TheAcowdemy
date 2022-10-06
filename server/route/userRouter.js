@@ -5,7 +5,7 @@ const { User } = require("../model/userModel");
 // CREATE
 ROUTER.route('/signup').post((req, res) => {
     let userObj = {
-        _id: req.body._id,
+        _id: req.body.username,
         password: req.body.password,
         email: req.body.email,
         name: req.body.name,

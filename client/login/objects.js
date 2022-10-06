@@ -14,7 +14,7 @@ const confirmPasswordIn = document.querySelector('#confirmPassword');
 const signupBtnIn = document.querySelector('#signupBtn');
 
 // USER OBJECTS
-const USER = {
+let USER = {
     username: '',
     name: '',
     email: '',
@@ -25,12 +25,12 @@ const USER = {
     cows: []
 }
 
-const existingUser = {
+let existingUser = {
     username,
     password
 }
 
-const newUser = {
+let newUser = {
     name,
     username,
     email,

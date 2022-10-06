@@ -17,7 +17,7 @@ const updateItems = () => {
 
 const logout = () => {
     localStorage.clear();
-    window.location.replace('../index.html');
+    window.location.replace('./index.html');
 }
 
 logoutBtn.addEventListener('click', logout);

@@ -1,7 +1,9 @@
-const login = (e) => {
+const login = async (e) => {
     e.preventDefault();
     getValues();
-    if (validLogin(existingUser.username, existingUser.password)) {
+    console.log(existingUser)
+    if (await validLogin(existingUser.username, existingUser.password)) {
+        console.log("valid login")
         localStorage.setItem("accountStored", 'yes');
         localStorage.setItem("username", existingUser.username)
         window.location.replace("../index.html")
@@ -18,7 +20,7 @@ const signup = (e) => {
         createUser(newUser);
         localStorage.setItem("accountStored", 'yes');
         localStorage.setItem("username", newUser.username);
-        window.location.replace('../index.html')
+        // window.location.replace('../index.html')
     } else if (userExists(newUser.username)) {
         clearUsernames();
     } else if(!validPasswords(newUser.password, confirmPassword)) {

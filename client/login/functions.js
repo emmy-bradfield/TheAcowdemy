@@ -32,13 +32,16 @@ const clearUsernames = () => {
 }
 
 // VALIDATION CHECKS
-const userExists = (username) => {
-    getUser(username);
+const userExists = async(username) => {
+    await getUser(username);
+    console.log(username);
+    console.log(USER.username);
     return (USER.username !== '');
 };
 
-const correctPassword = (username, password) => {
-    return(getPassword(username) === password);
+const correctPassword = async(username, password) => {
+    let expected = await getPassword(username);
+    return(expected === password);
 };
 
 const validPasswords = (passwordOne, passwordTwo) => {
@@ -51,13 +54,18 @@ const validPasswords = (passwordOne, passwordTwo) => {
     } else return true;
 };
 
-const validLogin = (username, password) => {
-    if (userExists(username)) return correctPassword(username, password);
+const validLogin = async (username, password) => {
+    let real = await userExists(username)
+    if (real) {
+        console.log("user exists\n", USER);
+        return correctPassword(username, password);
+    }
     else return false;
 }
 
-const validSignup = (username, passwordOne, passwordTwo) => {
-    if(userExists(username)) {
+const validSignup = async(username, passwordOne, passwordTwo) => {
+    let exists = await userExists(username)
+    if(exists) {
         return false;
     }
     else if (validPasswords(passwordOne, passwordTwo)) {
