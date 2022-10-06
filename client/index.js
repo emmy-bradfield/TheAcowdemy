@@ -4,6 +4,7 @@ const checkLogin = () => {
     if (isLoggedIn !== 'yes') window.location.replace('./login')
     else {
         ACCOUNT = JSON.parse(localStorage.getItem("user"));
+        ACCOUNT.items[0].CP = (ACCOUNT.items[0].bug) + (ACCOUNT.items[0].veg * 3) + (ACCOUNT.items[0].gem * 5);
         console.log(ACCOUNT);
         setup(ACCOUNT)
     }
@@ -13,6 +14,7 @@ const setup = (ACCOUNT) => {
     INVENTORY.plants = ACCOUNT.items[0].veg;
     INVENTORY.bugs = ACCOUNT.items[0].bug;
     INVENTORY.coins = ACCOUNT.items[0].gem
+    INVENTORY.CP = ACCOUNT.items[0].CP;
 }
 
 window.addEventListener('load', checkLogin);

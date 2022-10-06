@@ -97,7 +97,8 @@ let ACCOUNT;
 const INVENTORY = {
     plants: 0,
     coins: 0,
-    bugs: 0
+    bugs: 0,
+    coins: 0
 };
 
 const COWS = [];

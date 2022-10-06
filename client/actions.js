@@ -68,6 +68,7 @@ const collect = () => {
                 INVENTORY.coins +=1;
                 ACCOUNT.items[0].gem = INVENTORY.coins
             }
+            ACCOUNT.items[0].CP = (ACCOUNT.items[0].bug) + (ACCOUNT.items[0].veg * 3) + (ACCOUNT.items[0].gem * 5);
             localStorage.setItem("user", JSON.stringify(ACCOUNT));
         }
     }
