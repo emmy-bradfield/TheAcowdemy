@@ -39,7 +39,7 @@ ROUTER.route("/recover/:email").get((req, res) => {
 });
 
 ROUTER.route("/get-cows/:_id").get((req, res) => {
-    User.findById(req.params._id).then((user) => res.json(user.cows).catch((err) => res.json(`Error: ${err}`)));
+    User.findById(req.params._id).then((user) => res.json(user.cows)).catch((err) => res.json(`Error: ${err}`));
 })
 
 // UPDATE
