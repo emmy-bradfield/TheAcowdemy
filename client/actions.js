@@ -3,7 +3,7 @@ const goHome = () => {
         const BOX = HOME[i];
         if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})){
             HOME_DOOR.active = true;
-            setInterval(window.location.replace('../home'), 5000);
+            setInterval(window.location.replace('./home'), 5000);
         } 
     }
 }
@@ -48,7 +48,7 @@ const goHut = () => {
         const BOX = HUT[i];
         if (hitBox({player: PLAYER, bound: BOX}) && enteredZone({player: PLAYER, bound: BOX})) {
             HUT_DOOR.active = true;
-            setInterval(window.location.replace('../hut'), 5000);
+            setInterval(window.location.replace('./hut'), 5000);
         }
     }
 }
