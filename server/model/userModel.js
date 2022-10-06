@@ -19,7 +19,8 @@ const userSchema = new Schema({
     items: [{
         veg: Number,
         bug: Number,
-        gem: Number
+        gem: Number,
+        CP: Number
     }],
     cows: [cowSchema]
 });
