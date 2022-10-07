@@ -12,7 +12,7 @@ const display = new Image();
 display.src = '../assets/img/barn.png';
 
 // DOM
-const container = document.querySelector("#container");
+const div = document.querySelector("#display");
 
 // IN-GAME ITEMS
 const INVENTORY = {

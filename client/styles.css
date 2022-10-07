@@ -239,16 +239,16 @@ li{
 
 #child{
     width: 1024;
-    height: 576;
+    height: 578px;
     background-color: black;
     border-radius: 10px;
     position: absolute;
-    top: 0;
+    top: 25px;
     bottom: 0;
     left: 0;
     right: 0;
     pointer-events: none;
-    opacity: 0;
+    opacity: 1;
 }
 
 #container{
@@ -327,9 +327,9 @@ li{
 
 /*INTERACTIVE CANVAS OVERLAYS*/
 #backBtn{
-    margin-top: auto;
-    margin-left: 132px;
-    margin-bottom: 45px;
+    position: absolute;
+    left: 132px;
+    top: 520px;
     width: 3.5em;
     height: 2.5em;
     pointer-events: all;
@@ -337,9 +337,9 @@ li{
 }
 
 #exitBtn{
-    margin-top: auto;
-    margin-left: 170px;
-    margin-bottom: 400px;
+    position: absolute;
+    left: 170px;
+    top: 170px;
     width: 2.5em;
     height: 2em;
     pointer-events: all;
@@ -347,12 +347,11 @@ li{
 }
 
 #whiteBox{
-    margin-left: 270px;
-    margin-right: auto;
-    margin-bottom: 380px;
-    margin-top: auto;
-    width: 8em;
-    height: 7em;
+    position: absolute;
+    left: 460px;
+    top: 135px;
+    width: 100px;
+    height: 100px;
     background-color: transparent;
     border: 0;
     pointer-events: all;
@@ -360,12 +359,11 @@ li{
 }
 
 #blueBox{
-    margin-left: -160px;
-    margin-right: auto;
-    margin-bottom: 380px;
-    margin-top: auto;
-    width: 8em;
-    height: 7em;
+    position: absolute;
+    left: 625px;
+    top: 135px;
+    width: 100px;
+    height: 100px;
     background-color: transparent;
     border: 0;
     pointer-events: all;
@@ -373,12 +371,11 @@ li{
 }
 
 #greenBox{
-    margin-left: -160px;
-    margin-right: auto;
-    margin-bottom: 380px;
-    margin-top: auto;
-    width: 8em;
-    height: 7em;
+    position: absolute;
+    left: 780px;
+    top: 135px;
+    width: 100px;
+    height: 100px;
     background-color: transparent;
     border: 0;
     pointer-events: all;
@@ -386,12 +383,11 @@ li{
 }
 
 #purpleBox{
-    margin-left: -160px;
-    margin-right: auto;
-    margin-bottom: 156px;
-    margin-top: auto;
-    width: 8em;
-    height: 7em;
+    position: absolute;
+    left: 550px;
+    top: 360px;
+    width: 100px;
+    height: 100px;
     background-color: transparent;
     border: 0;
     pointer-events: all;
@@ -399,12 +395,11 @@ li{
 }
 
 #goldBox{
-    margin-left: -160px;
-    margin-right: auto;
-    margin-bottom: 156px;
-    margin-top: auto;
-    width: 8em;
-    height: 7em;
+    position: absolute;
+    left: 710px;
+    top: 360px;
+    width: 100px;
+    height: 100px;
     background-color: transparent;
     border: 0;
     pointer-events: all;

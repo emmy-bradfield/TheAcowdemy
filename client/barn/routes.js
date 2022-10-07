@@ -54,8 +54,8 @@ const getCows = async() => {
             details.style.left = `${X_range+15}px`;
             details.style.top = `${Y_range-30}px`;
             details.style.height = 'fit-content';
-            details.style.color = 'white';
-            details.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+            details.style.color = 'rgba(255, 255, 255, 0.2)';
+            details.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
             details.style.borderRadius = '10px';
             details.style.padding = "5px"
             details.style.textAlign = 'center';
@@ -64,6 +64,7 @@ const getCows = async() => {
                 title.style.fontSize = "x-large";
                 age.style.fontSize = "larger";
                 cost.style.fontSize = "larger";
+                details.style.color = 'rgba(255, 255, 255, 1)';
                 details.style.backgroundColor = "rgba(0, 0, 0, 1)";
                 details.style.left = `${X_range}px`;
                 details.style.top = `${Y_range-50}px`;
@@ -72,11 +73,12 @@ const getCows = async() => {
                 title.style.fontSize = "large";
                 age.style.fontSize = "small";
                 cost.style.fontSize = "small";
-                details.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+                details.style.color = 'rgba(255, 255, 255, 0.2)';
+                details.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
                 details.style.left = `${X_range+15}px`;
                 details.style.top = `${Y_range-30}px`;
             })
-            container.append(details)
+            div.append(details)
             console.log(cow.name);
         })
     })

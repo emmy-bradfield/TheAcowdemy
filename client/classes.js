@@ -101,7 +101,7 @@ class Object {
     }
     
     draw() {
-        ctx.drawImage(
+        this.image.onload(ctx.drawImage(
             this.image,
             this.frames.val * this.width,
             0,
@@ -111,7 +111,7 @@ class Object {
             this.position.y,
             this.image.width / this.frames.max,
             this.image.height
-            );
+            ));
 
         if (!this.active) this.frames.val = 0;
         else if (this.active) this.frames.val = 1;
