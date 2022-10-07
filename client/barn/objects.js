@@ -9,7 +9,10 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 // IMAGES
 // --static
 const display = new Image();
-display.src = '../assets/img/blank_template.png';
+display.src = '../assets/img/barn.png';
+
+// DOM
+const container = document.querySelector("#container");
 
 // IN-GAME ITEMS
 const INVENTORY = {
@@ -18,7 +21,10 @@ const INVENTORY = {
     bugs: 0
 };
 
+const cowArray = [];
 const COWS = [];
+let cowImage = new Image();
+cowImage.src = '../assets/img/cow.png';
 
 const Daisy = {
     name: 'Daisy',

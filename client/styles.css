@@ -332,6 +332,18 @@ li{
     margin-bottom: 45px;
     width: 3.5em;
     height: 2.5em;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+#exitBtn{
+    margin-top: auto;
+    margin-left: 170px;
+    margin-bottom: 400px;
+    width: 2.5em;
+    height: 2em;
+    pointer-events: all;
+    cursor: pointer;
 }
 
 #whiteBox{
