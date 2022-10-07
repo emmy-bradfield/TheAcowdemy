@@ -2,7 +2,7 @@ const getCows = async() => {
     let id = localStorage.getItem("username");
     let cowArray = [];
     let display = document.querySelector('#display')
-    await axios.get(`http://localhost:4000/users/get-cows/${id}`).then((res) => {
+    await axios.get(`/users/get-cows/${id}`).then((res) => {
         let cowString = JSON.stringify(res.data);
         let cowList = JSON.parse(cowString);
         for (i = 0; i < cowList.length; i++){
