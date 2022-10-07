@@ -4,7 +4,7 @@
   "description": "",
   "main": "client/index.html",
   "scripts": {
-    "start": "nodemon --inspect server/index.js",
+    "start": "cd server && npm install && npm start",
     "test": "cd server && npm run test"
   },
   "repository": {
