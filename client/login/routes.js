@@ -1,9 +1,9 @@
 const createUser = async(reqBody) => {
-    await axios.post('http://localhost:4000/users/signup', reqBody).then(res => console.log(res)).catch(err => console.log(err));
+    await axios.post('/users/signup', reqBody).then(res => console.log(res)).catch(err => console.log(err));
 };
 
 const getUser = async (reqParam) => {
-    await axios.get(`http://localhost:4000/users/get/${reqParam}`).then(res => {
+    await axios.get(`/users/get/${reqParam}`).then(res => {
         console.log(res.data)
         if (res.data !== null) {
             localStorage.setItem("user", JSON.stringify(res.data))
@@ -24,6 +24,6 @@ const getUser = async (reqParam) => {
 }
 
 const getPassword = async(reqParam) => {
-    await axios.get(`http://localhost:4000/users/get/${reqParam}`).then(res => expected = res.data.password).catch(err => console.log(err));
+    await axios.get(`/users/get/${reqParam}`).then(res => expected = res.data.password).catch(err => console.log(err));
     return expected;
 }
