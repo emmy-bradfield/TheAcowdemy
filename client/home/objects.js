@@ -12,7 +12,11 @@ const display = new Image();
 display.src = '../assets/img/home.png';
 
 // DOM
-const buildCow = document.querySelector('#cowBtn');
+const whiteBox = document.querySelector('#whiteBox');
+const blueBox = document.querySelector('#blueBox');
+const greenBox = document.querySelector('#greenBox');
+const purpleBox = document.querySelector('#purpleBox');
+const goldBox = document.querySelector('#goldBox');
 
 // IN-GAME ITEMS
 let ACCOUNT;

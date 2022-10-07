@@ -328,19 +328,71 @@ li{
 /*INTERACTIVE CANVAS OVERLAYS*/
 #backBtn{
     margin-top: auto;
-    margin-left: 102px;
+    margin-left: 132px;
     margin-bottom: 45px;
     width: 3.5em;
     height: 2.5em;
 }
 
-#cowBtn{
-    margin-left: 20px;
+#whiteBox{
+    margin-left: 270px;
     margin-right: auto;
-    margin-bottom: 45px;
+    margin-bottom: 380px;
     margin-top: auto;
-    width: 3.5em;
-    height: 2.5em;
+    width: 8em;
+    height: 7em;
+    background-color: transparent;
+    border: 0;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+#blueBox{
+    margin-left: -160px;
+    margin-right: auto;
+    margin-bottom: 380px;
+    margin-top: auto;
+    width: 8em;
+    height: 7em;
+    background-color: transparent;
+    border: 0;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+#greenBox{
+    margin-left: -160px;
+    margin-right: auto;
+    margin-bottom: 380px;
+    margin-top: auto;
+    width: 8em;
+    height: 7em;
+    background-color: transparent;
+    border: 0;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+#purpleBox{
+    margin-left: -160px;
+    margin-right: auto;
+    margin-bottom: 156px;
+    margin-top: auto;
+    width: 8em;
+    height: 7em;
+    background-color: transparent;
+    border: 0;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+#goldBox{
+    margin-left: -160px;
+    margin-right: auto;
+    margin-bottom: 156px;
+    margin-top: auto;
+    width: 8em;
+    height: 7em;
     background-color: transparent;
     border: 0;
     pointer-events: all;
