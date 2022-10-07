@@ -3,7 +3,7 @@ const EXPRESS = require("express");
 const APP = EXPRESS();
 const CORS = require("cors");
 const PORT = process.env.PORT || 4000;
-const MONGO_URL = 'mongodb+srv://throwaway:root@acowdemy.kh65rp5.mongodb.net/?retryWrites=true&w=majority';
+const MONGO_URL = "mongodb+srv://emily-bradfield:applebob1@acowdemy.kh65rp5.mongodb.net/acowdemy";
 const PATH = require('path');
 
 APP.use(EXPRESS.json());
