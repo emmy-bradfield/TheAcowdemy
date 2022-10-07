@@ -22,9 +22,9 @@ window.addEventListener('load', checkLogin);
 function animate() {
     window.requestAnimationFrame(animate);
 
-    MAP.draw();
+    mapImg.onload(MAP.draw());
     INTERACTIVE_OBJECTS.forEach(object => object.draw());
-    PLAYER.draw();
+    playerImg.onload(PLAYER.draw());
     BOUNDS.forEach(bound => bound.draw());
     FOREGROUND.draw();
     UI.draw();
@@ -60,5 +60,19 @@ function animate() {
     else if (keys.d.pressed && lastKey === 'd') moveRight();
 
 };
+
+window.onload = function(){
+    if(!window.location.hash){
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    } else {
+        gsap.to("#child", {opacity: 0, duration: 3})
+        let DETAILS = JSON.parse(localStorage.getItem("user"));
+        usernameTxt.innerHTML = ''
+        usernameTxt.textContent = localStorage.getItem("username")
+        levelTxt.innerHTML = ''
+        levelTxt.textContent = DETAILS.level;
+    }
+}
 
 animate();

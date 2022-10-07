@@ -1,11 +1,13 @@
 const userDiv = document.querySelector('#users-text')
-const username = document.querySelector('#user');
-const level = document.querySelector('#level');
+const usernameTxt = document.querySelector('#user');
+const levelTxt = document.querySelector('#level');
 
 const itemsDiv = document.querySelector('#items-text');
 const veg = document.querySelector('#veg');
 const bug = document.querySelector('#bug');
 const gem = document.querySelector('#gem');
+
+const child = document.querySelector('#child');
 
 const logoutBtn = document.querySelector('#logOut');
 
