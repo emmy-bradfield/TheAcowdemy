@@ -34,7 +34,7 @@ const logout = async() => {
         let id = ACCOUNT._id;
         console.log(ACCOUNT);
         console.log(id)
-        await axios.post(`http://localhost:4000/users/save/${id}`, ACCOUNT);
+        await axios.post(`/users/save/${id}`, ACCOUNT);
         localStorage.clear();
         // window.location.reload();
     }
