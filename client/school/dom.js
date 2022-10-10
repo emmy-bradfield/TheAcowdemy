@@ -20,7 +20,7 @@ const updateItems = () => {
 const logout = () => {
     console.log("logout attempted");
     localStorage.setItem("logout", "yes");
-    window.location.replace('./login');
+    window.location.replace('../login');
 };
 
 logoutBtn.addEventListener('click', logout);

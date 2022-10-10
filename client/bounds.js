@@ -25,7 +25,7 @@ collisionsArray.forEach((row, i) => {
                     x: (j * Bound.width) + offset.x,
                     y: (i * Bound.height) + offset.y
                 },
-                colour: 'rgba(255, 0, 0, 1)'
+                colour: 'rgba(255, 0, 0, 0)'
             }))
         } 
     })
@@ -39,7 +39,7 @@ zonesArray.forEach((row, i) => {
                     x: (j * Bound.width) + offset.x,
                     y: (i * Bound.width) + offset.y
                 },
-                colour: 'rgba(128, 0, 128, 1)'
+                colour: 'rgba(128, 0, 128, 0)'
             }))
         } else if (digit === 2) {
             BARN.push(new Bound({
@@ -47,7 +47,7 @@ zonesArray.forEach((row, i) => {
                     x: (j * Bound.width) + offset.x,
                     y: (i * Bound.width) + offset.y
                 },
-                colour: 'rgba(128, 0, 128, 1)'
+                colour: 'rgba(128, 0, 128, 0)'
             }))
         } else if (digit === 3) {
             LEAVE.push(new Bound({
@@ -55,7 +55,7 @@ zonesArray.forEach((row, i) => {
                     x: (j * Bound.width) + offset.x,
                     y: (i * Bound.width) + offset.y
                 },
-                colour: 'rgba(128, 0, 128, 1)'
+                colour: 'rgba(128, 0, 128, 0)'
             }))
         } else if (digit === 6) {
             COLLECTABLES.push(new Bound({
@@ -63,7 +63,7 @@ zonesArray.forEach((row, i) => {
                     x: (j * Bound.width) + offset.x,
                     y: (i * Bound.height) + offset.y
                 },
-                colour: 'rgba(255, 0, 0, 1)'
+                colour: 'rgba(255, 0, 0, 0)'
             }))
         } else if (digit === 7) {
             ANIMATE.push(new Bound({
@@ -71,7 +71,7 @@ zonesArray.forEach((row, i) => {
                     x: (j * Bound.width) + offset.x,
                     y: (i * Bound.height) + offset.y
                 },
-                colour: 'rgba(128, 0, 128, 1)'
+                colour: 'rgba(128, 0, 128, 0)'
             }))
         }
     })
