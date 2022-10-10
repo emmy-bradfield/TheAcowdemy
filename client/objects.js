@@ -14,13 +14,16 @@ mapImg.src = './assets/img/map.png';
 const foregroundImg = new Image();
 foregroundImg.src = './assets/img/foreground.png';
 
+const schoolMap = new Image();
+schoolMap.src = './assets/img/schoolMap_start.png';
+
 // --sprite
 const playerImg = new Image();
 
-const up = './assets/spritesheets/playerUp.png';
-const left = './assets/spritesheets/playerLeft.png';
-const down = './assets/spritesheets/playerDown.png';
-const right = './assets/spritesheets/playerRight.png';
+let up = './assets/spritesheets/playerUp.png';
+let left = './assets/spritesheets/playerLeft.png';
+let down = './assets/spritesheets/playerDown.png';
+let right = './assets/spritesheets/playerRight.png';
 
 playerImg.src = down;
 

@@ -33,14 +33,11 @@ function animate() {
     PLAYER.moving = false;
     HOME_DOOR.active = false;
     BARN_DOOR.active = false;
-    HUT_DOOR.active = false;
     CHEST.active = false;
     MAIN_GATE.active = false;
-    SECOND_GATE.active = false;
 
     goHome();
     goBarn();
-    goHut();
     openChest();
     updateItems();
     
@@ -49,7 +46,6 @@ function animate() {
 
     if (keys.w.pressed || keys.a.pressed || keys.s.pressed || keys.d.pressed) {
         leave();
-        sailHome();
         collect();
         gateAnimations();
     }

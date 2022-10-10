@@ -1,7 +1,6 @@
-const INTERACTIVE_OBJECTS = [CHEST, HOME_DOOR, BARN_DOOR, MAIN_GATE];
-const BOUNDS = [...COLLISIONS, ...HOME, ...BARN, ...LEAVE, ...COLLECTABLES, ...ANIMATE];
-const MAPS = [MAP, FOREGROUND];
-const MOVABLES = [ ...MAPS, ...BOUNDS, ...INTERACTIVE_OBJECTS];
+const INTERACTIVE_OBJECTS = [HUT_DOOR, SECOND_GATE];
+const BOUNDS = [...COLLISIONS, ...RETURN, ...HUT, ...COLLECTABLES, ...ANIMATE];
+const MOVABLES = [SCHOOL_BACKGROUND, ...BOUNDS, ...INTERACTIVE_OBJECTS];
 
 const hitBox = ({player, bound}) => {
     return(
@@ -155,7 +154,7 @@ const gateAnimations = () => {
     for (i = 0; i < ANIMATE.length; i ++) {
         const BOX = ANIMATE[i];
         if (hitBox({player: PLAYER, bound: BOX})) {
-            MAIN_GATE.active = true;
+            SECOND_GATE.active = true;
         }
     }
 };

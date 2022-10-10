@@ -3,9 +3,8 @@ const COLLISIONS = [];
 
 const zonesArray = [];
 
-const HOME = [];
-const BARN = [];
-const LEAVE = [];
+const RETURN = [];
+const HUT = [];
 const COLLECTABLES = [];
 const ANIMATE = [];
 
@@ -33,24 +32,16 @@ collisionsArray.forEach((row, i) => {
 
 zonesArray.forEach((row, i) => {
     row.forEach((digit, j) => {
-        if (digit === 1) {
-            HOME.push(new Bound({
+        if (digit === 4) {
+            RETURN.push(new Bound({
                 position: {
                     x: (j * Bound.width) + offset.x,
                     y: (i * Bound.width) + offset.y
                 },
                 colour: 'rgba(128, 0, 128, 1)'
             }))
-        } else if (digit === 2) {
-            BARN.push(new Bound({
-                position: {
-                    x: (j * Bound.width) + offset.x,
-                    y: (i * Bound.width) + offset.y
-                },
-                colour: 'rgba(128, 0, 128, 1)'
-            }))
-        } else if (digit === 3) {
-            LEAVE.push(new Bound({
+        } else if (digit === 5) {
+            HUT.push(new Bound({
                 position: {
                     x: (j * Bound.width) + offset.x,
                     y: (i * Bound.width) + offset.y
